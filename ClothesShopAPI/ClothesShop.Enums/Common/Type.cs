@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ClothesShop.Database.Enums
+namespace ClothesShop.Enums.Common
 {
     public enum Type
     {

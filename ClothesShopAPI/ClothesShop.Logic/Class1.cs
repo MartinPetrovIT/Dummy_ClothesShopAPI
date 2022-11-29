@@ -1,6 +1,6 @@
 ﻿namespace ClothesShop.Logic
 {
-    public class Class1
+    public class Class1 
     {
 
     }

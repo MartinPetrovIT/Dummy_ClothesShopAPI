@@ -23,24 +23,24 @@ namespace ClothesShoAPI.Database
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder
-                .Entity<Order>()
-                .HasOne(o => o.User)
-                .WithMany(u => u.Orders)
-                .HasForeignKey(o => o.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //builder
+            //    .Entity<Order>()
+            //    .HasOne(o => o.User)
+            //    .WithMany(u => u.Orders)
+            //    .HasForeignKey(o => o.UserId)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<User>()
-                .HasMany(u => u.Orders)
-                .WithOne( o => o.User)
-                .HasForeignKey(o => o.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //builder.Entity<User>()
+            //    .HasMany(u => u.Orders)
+            //    .WithOne( o => o.User)
+            //    .HasForeignKey(o => o.UserId)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Item>()
-               .HasOne(i => i.Order)
-               .WithMany(o => o.Items)
-               .HasForeignKey(o => o.OrderId)
-               .OnDelete(DeleteBehavior.Restrict);
+            //builder.Entity<Item>()
+            //   .HasOne(i => i.Order)
+            //   .WithMany(o => o.Items)
+            //   .HasForeignKey(o => o.OrderId)
+            //   .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Order>().Ignore(o => o.TotalSum);
 

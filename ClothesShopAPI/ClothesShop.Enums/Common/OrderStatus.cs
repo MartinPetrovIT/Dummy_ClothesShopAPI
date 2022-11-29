@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClothesShop.Database.Enums
+namespace ClothesShop.Enums.Common
 {
     public enum OrderStatus
     {

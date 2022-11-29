@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClothesShop.Database\ClothesShop.Database.csproj" />
+    <ProjectReference Include="..\ClothesShop.Logic.Interfaces\ClothesShop.Logic.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

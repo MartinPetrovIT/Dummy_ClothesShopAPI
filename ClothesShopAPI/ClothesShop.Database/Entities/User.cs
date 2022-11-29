@@ -12,7 +12,7 @@ namespace ClothesShop.Database.Entities
 
         public string Email { get; set; }
         public string HashPassword { get; set; }
-        public List<Order> Orders { get; set; }
+        //public List<Order> Orders { get; set; }
 
     }
 }

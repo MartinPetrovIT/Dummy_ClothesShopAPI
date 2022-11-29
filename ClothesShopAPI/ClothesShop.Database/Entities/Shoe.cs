@@ -1,4 +1,4 @@
-﻿using MyEnums=ClothesShop.Database.Enums;
+﻿using MyEnums=ClothesShop.Enums.Common;
 using System;
 
 namespace ClothesShop.Database.Entities
@@ -14,7 +14,7 @@ namespace ClothesShop.Database.Entities
         public string MadeIn { get; set; }
         public string Composition { get; set; }
         public int Size { get; set; }
-        public Item Item { get; set; }
-        public int ItemId { get; set; }
+        //public Item Item { get; set; }
+        //public int ItemId { get; set; }
     }
 }

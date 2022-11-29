@@ -1,4 +1,6 @@
 using ClothesShoAPI.Database;
+using ClothesShop.Logic;
+using ClothesShop.Logic.Interfaces.Dress.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -23,6 +25,7 @@ namespace ClothesShopAPI
                     b => b.MigrationsAssembly("ClothesShop.Database"));
             });
 
+            builder.Services.AddTransient<IDressService, DressService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

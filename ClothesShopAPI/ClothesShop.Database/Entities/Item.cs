@@ -17,8 +17,8 @@ namespace ClothesShop.Database.Entities
         public decimal Price { get; set; }
         public string ImageUrl { get; set; }
 
-        public Order Order { get; set; }
+        //public Order Order { get; set; }
 
-        public int OrderId { get; set; }
+        //public int OrderId { get; set; }
     }
 }
