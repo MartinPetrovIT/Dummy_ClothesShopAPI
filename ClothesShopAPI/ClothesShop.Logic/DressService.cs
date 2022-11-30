@@ -1,6 +1,7 @@
 ﻿using ClothesShoAPI.Database;
 using ClothesShop.Logic.Interfaces.Dress.Models;
 using ClothesShop.Logic.Interfaces.Dress.Services;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace ClothesShop.Logic
 
                 });
 
-               return data.SaveChangesAsync();
+                return data.SaveChangesAsync();
             }
             catch (Exception ex)
             {
@@ -45,7 +46,7 @@ namespace ClothesShop.Logic
             }
         }
 
-   
+
 
         public Task<bool> DeleteDress(int dressId)
         {
@@ -57,9 +58,36 @@ namespace ClothesShop.Logic
             throw new NotImplementedException();
         }
 
-        public Task<List<Dress>> GetAll()
+        public async Task<IEnumerable<Dress>> GetAll()
         {
-            throw new NotImplementedException();
+            var a = data.Dress.Select(x => new Dress
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Brand = x.Brand,
+                Price = x.Price,
+                ImageUrl = x.ImageUrl,
+                Type = x.Type,
+                Category = x.Category,
+                MadeIn = x.MadeIn,
+                Composition = x.Composition,
+                Size = x.Size,
+
+            }).ToList();
+            return await Task.Run(() => data.Dress.Select(x => new Dress
+            {
+                Id = x.Id,
+                Name = x.Name,
+                Brand = x.Brand,
+                Price = x.Price,
+                ImageUrl = x.ImageUrl,
+                Type = x.Type,
+                Category = x.Category,
+                MadeIn = x.MadeIn,
+                Composition = x.Composition,
+                Size = x.Size,
+
+            }).ToListAsync());
         }
 
         public Task<Dress> GetById(int id)

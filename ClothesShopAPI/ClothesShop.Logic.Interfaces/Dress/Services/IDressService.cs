@@ -1,4 +1,4 @@
-﻿using Models= ClothesShop.Logic.Interfaces.Dress.Models;
+﻿using Models = ClothesShop.Logic.Interfaces.Dress.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ namespace ClothesShop.Logic.Interfaces.Dress.Services
 
         public Task<bool> EditDress(int dressId);
 
-        public Task<List<Models.Dress>> GetAll();
+        public Task<IEnumerable<Models.Dress>> GetAll();
 
         public Task<Models.Dress> GetById(int id);
     }
